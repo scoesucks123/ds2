@@ -1,0 +1,31 @@
+aryan@user-1-2:~/Desktop/temp2-main/DSEDIT/Assignment2$ idlj -fall ReverseModule.idl
+aryan@user-1-2:~/Desktop/temp2-main/DSEDIT/Assignment2$ javac *.java ReverseModule/*.java
+ReverseModule/_ReverseStub.java:46: warning: IORCheckImpl is internal proprietary API and may be removed in a future release
+     com.sun.corba.se.impl.orbutil.IORCheckImpl.check(str, "ReverseModule._ReverseStub");
+                                  ^
+Note: ReverseModule/ReversePOA.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 warning
+aryan@user-1-2:~/Desktop/temp2-main/DSEDIT/Assignment2$ orbd -ORBInitialPort 1056&
+[1] 23803
+
+aryan@user-1-2:~/Desktop/temp2-main/DSEDIT/Assignment2$ java ReverseServer -ORBInitialPort 1056&
+[1] 23834
+aryan@user-1-2:~/Desktop/temp2-main/DSEDIT/Assignment2$ Reverse Object Created
+Step1
+Step2
+Step3
+Step4
+Reverse Server reading and waiting....
+
+
+OPEN NEW TERMINAL....................
+
+
+aryan@user-1-2:~/Desktop/temp2-main/DSEDIT/Assignment2$ java ReverseClient -ORBInitialPort 1056 -OR BInitialHost localhost
+Enter String=
+rathodyedazhava
+Server Send avahzadeydohtar
+aryan@user-1-2:~/Desktop/temp2-main/DSEDIT/Assignment2$ 
+
+
